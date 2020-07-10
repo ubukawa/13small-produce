@@ -9,7 +9,11 @@ const srcs = config.get('srcs')
 const ogr2ogrPath = config.get('ogr2ogrPath')
 const tippecanoePath = config.get('tippecanoePath')
 const dstDir = config.get('dstDir')
-const pgPath = config.get('pgPath')
+const host = config.get('host')
+const port = config.get('port')
+const dbname = config.get('dbname')
+const user = config.get('user')
+const password = config.get('password')
 
 const tippecanoe = spawn(tippecanoePath, [
   `--output-to-directory=${dstDir}`,
@@ -53,7 +57,7 @@ for (const src of srcs) {
     '-f', 'GeoJSONSeq',
     '-lco', 'RS=YES',
     '/vsistdout/',
-    `"${pgPath}"`,
+    `"PG:host=${host} port=${port} dbname=${dbname} user=${user} password=${password}"`,
     src.sql
   ])
   ogr2ogr.stdout.pipe(parser)
