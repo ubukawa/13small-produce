@@ -14,3 +14,18 @@ vi config/default.hjson
 mkdir /data/zxy   //mbtilesDir
 
 rake // or node index.js or node index_africa.js  
+
+
+# How to use
+Need to have gdal greater than 2.4.0  
+In order to do so,   
+
+sudo apt update  
+sudo apt install software-properties-common  
+sudo apt-get install python3.6-dev  
+sudo add-apt-repository ppa:ubuntugis/ppa  
+sudo apt-get install gdal-bin  
+
+
+https://mothergeo-py.readthedocs.io/en/latest/development/how-to/gdal-ubuntu-pkg.html
+https://linuxize.com/post/how-to-add-apt-repository-in-ubuntu/
