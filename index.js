@@ -18,6 +18,7 @@ const password = config.get('password')
 const tippecanoe = spawn(tippecanoePath, [
   `--output-to-directory=${dstDir}`,
   `--no-tile-compression`,
+  `--drop-rate=1`,
   '--force',
   `--minimum-zoom=${minzoom}`,
   `--maximum-zoom=${maxzoom}`,
@@ -57,7 +58,8 @@ for (const src of srcs) {
     '-f', 'GeoJSONSeq',
     '-lco', 'RS=YES',
     '/vsistdout/',
-    `"PG:host=${host} port=${port} dbname=${dbname} user=${user} password=${password}"`,
+    `PG:host=${host} port=${port} dbname=${dbname} user=${user} password=${password}`,
+    '-sql',    
     src.sql
   ])
   ogr2ogr.stdout.pipe(parser)

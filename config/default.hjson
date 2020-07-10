@@ -9,31 +9,136 @@
   password=ddd
   srcs: [
     {
-      sql: -sql "select * from unhq_bnda_cty_anno_l03"
+      sql: "select * from custom_unmap_0_bndl"
+      layer: c_bnd
+      minzoom: 5 
+      maxzoom: 5
+      projection: 4326
+    }
+    {
+      sql: "select * from unhq_bndl"
+      layer: hq_bnd
+      minzoom: 5 
+      maxzoom: 5
+      projection: 4326
+    }
+    {
+      sql: "select * from unhq_bndl05"
+      layer: hq_bnd
+      minzoom: 3 
+      maxzoom: 4
+      projection: 4326
+    }
+    {
+      sql: "select * from unhq_bndl25"
+      layer: hq_bnd
+      minzoom: 0 
+      maxzoom: 2
+      projection: 4326
+    }
+    {
+      sql: "select * from custom_planet_land_a_l08"
+      layer: landmass
+      minzoom: 0 
+      maxzoom: 5
+      projection: 4326
+    }
+    {
+      sql: "select * from custom_ne_rivers_lakecentrelines"
+      layer: water
+      minzoom: 0 
+      maxzoom: 5
+      projection: 4326
+    }
+    {
+      sql: "select * from custom_planet_ocean_l08"
+      layer: ocean
+      minzoom: 0 
+      maxzoom: 5
+      projection: 4326
+    }
+    {
+      sql: "select * from unhq_bnda25_cty"
+      layer: bnda_cty
+      minzoom: 1 
+      maxzoom: 5
+      projection: 4326
+    }
+    {
+      sql: "select * from unhq_phyp"
+      layer: un_phyp
+      minzoom: 5 
+      maxzoom: 5
+      projection: 4326
+    }
+    {
+      sql: "select * from unhq_bnda_cty_anno_l03"
       layer: lab_cty
       minzoom: 1 
       maxzoom: 1
       projection: 4326
     }
     {
-      sql: -sql "select * from unhq_bnda_cty_anno_l04"
+      sql: "select * from unhq_bnda_cty_anno_l04"
       layer: lab_cty
       minzoom: 2 
       maxzoom: 2
       projection: 4326
     }
     {
-      sql: -sql "select * from unhq_bnda_cty_anno_l05"
+      sql: "select * from unhq_bnda_cty_anno_l05"
       layer: lab_cty
       minzoom: 3 
       maxzoom: 3
       projection: 4326
     }
     {
-      sql: -sql "select * from unhq_bnda_cty_anno_l06"
+      sql: "select * from unhq_bnda_cty_anno_l06"
       layer: lab_cty
       minzoom: 4 
+      maxzoom: 5
+      projection: 4326
+    }
+    {
+      sql: "select * from unhq_cm02_phyp_anno_l04"
+      layer: lab_water
+      minzoom: 3 
+      maxzoom: 3
+      projection: 4326
+    }
+    {
+      sql: "select * from unhq_cm02_phyp_anno_l06"
+      layer: lab_water
+      minzoom: 4 
+      maxzoom: 5
+      projection: 4326
+    }
+    {
+      sql: "select * from un_glc30_global_lc_ms"
+      layer: landcover
+      minzoom: 5 
+      maxzoom: 5
+      projection: 4326
+    }
+    {
+      sql: "select * from un_glc30_global_lc_ss"
+      layer: landcover
+      minzoom: 3 
       maxzoom: 4
+      projection: 4326
+    }
+    {
+      sql: "select * from un_global_places"
+      layer: un_globalp
+      minzoom: 4 
+      maxzoom: 5
+      projection: 4326
+    }
+    {
+      sql: "select * from unhq_popp"
+      layer: un_popp
+      minzoom: 3 
+      maxzoom: 5
       projection: 4326
     }
   ]
