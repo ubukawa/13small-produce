@@ -1,0 +1,40 @@
+{
+  minzoom: 0
+  maxzoom: 5
+  projection: 4326
+  pgPath: PG:host=10.130.170.45 port=5433 dbname=un_base user=vtiles_r password=r7m6wiEeqjMoW5
+  srcs: [
+    {
+      sql: -sql "select * from unhq_bnda_cty_anno_l03"
+      layer: lab_cty
+      minzoom: 1 
+      maxzoom: 1
+      projection: 4326
+    }
+    {
+      sql: -sql "select * from unhq_bnda_cty_anno_l04"
+      layer: lab_cty
+      minzoom: 2 
+      maxzoom: 2
+      projection: 4326
+    }
+    {
+      sql: -sql "select * from unhq_bnda_cty_anno_l05"
+      layer: lab_cty
+      minzoom: 3 
+      maxzoom: 3
+      projection: 4326
+    }
+    {
+      sql: -sql "select * from unhq_bnda_cty_anno_l06"
+      layer: lab_cty
+      minzoom: 4 
+      maxzoom: 4
+      projection: 4326
+    }
+  ]
+  ogr2ogrPath: ogr2ogr
+  tippecanoePath: tippecanoe
+  dstDir: zxy
+}
+

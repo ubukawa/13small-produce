@@ -1,0 +1,30 @@
+{
+  "name": "13small-produce",
+  "version": "1.0.0",
+  "description": "codes for making the tile smaller than zoom level 5",
+  "main": "index.js",
+  "scripts": {
+    "produce": "rake"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ubukawa/13small-produce.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "Unlicense",
+  "bugs": {
+    "url": "https://github.com/ubukawa/13small-produce/issues"
+  },
+  "homepage": "https://github.com/ubukawa/13small-produce#readme",
+  "dependencies": {
+    "config": "^3.1.0",
+    "hjson": "^3.1.2",
+    "json-text-sequence": "^0.1.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babelify": "^10.0.0"
+  }
+}
