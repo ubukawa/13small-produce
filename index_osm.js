@@ -18,8 +18,6 @@ const password = config.get('password')
 const tippecanoe = spawn(tippecanoePath, [
   `--output-to-directory=${dstDir}`,
   `--no-tile-compression`,
-  `--no-feature-limit`,
-  `--no-tile-size-limit`,
   `--drop-rate=1`,
   '--force',
   `--minimum-zoom=${minzoom}`,
