@@ -16,7 +16,9 @@ mkdir /data/zxy   //mbtilesDir
 rake // or node index.js or node index_africa.js  
 
 
-# How to use
+# note
+Regarding ogr2ogr, its default srs for output data is 4326, so we do not have to give the projection even the original postgis data is stored in another projection.     
+  
 Need to have gdal greater than 2.4.0  
 In order to do so,   
 
