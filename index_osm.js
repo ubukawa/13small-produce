@@ -42,7 +42,6 @@ for (const src of srcs) {
       f = preprocessProperties(f)
       f.tippecanoe = {
         layer: src.layer,
-        projection: src.projection,
         minzoom: src.minzoom,
         maxzoom: src.maxzoom
       }

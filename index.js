@@ -46,7 +46,6 @@ for (const src of srcs) {
         projection: src.projection,
         minzoom: src.minzoom,
         maxzoom: src.maxzoom,
-        projection: src.projection
       }
       downstream.write(`\x1e${JSON.stringify(f)}\n`)
     })
